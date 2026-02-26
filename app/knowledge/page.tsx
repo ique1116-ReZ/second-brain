@@ -1,5 +1,5 @@
-import { BookOpen, FileText, Link, Book, GraduationCap, Dumbbell, Mountain, TrendingUp } from 'lucide-react';
-import Link from 'next/link';
+import { BookOpen, FileText, Link as LinkIcon, Book, GraduationCap, Dumbbell, Mountain, TrendingUp } from 'lucide-react';
+import NextLink from 'next/link';
 
 const knowledgeCategories = [
   {
@@ -69,7 +69,7 @@ const typeIcons = {
   book: <Book className="w-4 h-4" />,
   paper: <FileText className="w-4 h-4" />,
   guide: <FileText className="w-4 h-4" />,
-  article: <Link className="w-4 h-4" />,
+  article: <LinkIcon className="w-4 h-4" />,
 };
 
 export default function KnowledgePage() {
@@ -90,12 +90,12 @@ export default function KnowledgePage() {
             </div>
             
             <div className="flex items-center gap-4">
-              <Link 
+              <NextLink 
                 href="/"
                 className="px-4 py-2 text-sm rounded-lg border border-border hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
               >
                 返回首页
-              </Link>
+              </NextLink>
             </div>
           </div>
         </div>
@@ -154,7 +154,7 @@ export default function KnowledgePage() {
                         rel="noopener noreferrer"
                         className="mt-2 inline-flex items-center gap-1 text-sm text-accent hover:underline"
                       >
-                        <Link className="w-3 h-3" />
+                        <LinkIcon className="w-3 h-3" />
                         查看原文
                       </a>
                     )}
