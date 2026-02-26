@@ -6,54 +6,54 @@ const knowledgeCategories = [
     title: '核心理论',
     icon: <Book className="w-6 h-6" />,
     items: [
-      { name: '丹尼尔斯跑步方程式', type: 'book', author: 'Jack Daniels 博士' },
-      { name: '高级马拉松训练', type: 'book', author: 'Pete Pfitzinger' },
-      { name: '上坡运动员训练指南', type: 'book', author: 'Steve House 等' },
-      { name: '超马训练精要', type: 'book', author: 'Jason Koop' },
+      { name: '丹尼尔斯跑步方程式', type: 'book', author: 'Jack Daniels 博士', description: 'VDOT系统与训练强度区间' },
+      { name: '高级马拉松训练', type: 'book', author: 'Pete Pfitzinger', description: '马拉松生理学与周期化训练' },
+      { name: '上坡运动员训练指南', type: 'book', author: 'Steve House 等', description: '山地跑代谢基础与有氧开发' },
+      { name: '超马训练精要', type: 'book', author: 'Jason Koop', description: '超马能量系统与比赛策略' },
     ]
   },
   {
     title: '科学研究',
     icon: <GraduationCap className="w-6 h-6" />,
     items: [
-      { name: '无氧阈值：50+年的争议', type: 'paper', link: 'https://escholarship.org/uc/item/58p3d8sz' },
-      { name: '耐力训练的未来', type: 'paper', author: 'Stephen Seiler 博士' },
+      { name: '无氧阈值：50+年的争议', type: 'paper', link: 'https://escholarship.org/uc/item/58p3d8sz', description: '乳酸阈值与气体交换阈值研究' },
+      { name: '耐力训练的未来', type: 'paper', author: 'Stephen Seiler 博士', description: '80:20极化训练模型' },
     ]
   },
   {
     title: '训练指南',
     icon: <FileText className="w-6 h-6" />,
     items: [
-      { name: '超马训练指南', type: 'guide', source: 'TrainingPeaks' },
-      { name: '马拉松训练指南', type: 'guide', source: 'TrainingPeaks' },
-      { name: '力量训练终极指南', type: 'guide', source: 'TrainingPeaks' },
+      { name: '超马训练指南', type: 'guide', source: 'TrainingPeaks', link: 'https://www.trainingpeaks.com/learn/ultramarathon-training-guide/', description: '超马入门到精通的系统指南' },
+      { name: '马拉松训练指南', type: 'guide', source: 'TrainingPeaks', link: 'https://www.trainingpeaks.com/learn/marathon-training-guide/', description: '马拉松训练基础与进阶' },
+      { name: '力量训练终极指南', type: 'guide', source: 'TrainingPeaks', link: 'https://www.trainingpeaks.com/learn/strength-training-guide/', description: '跑步专项力量训练方案' },
     ]
   },
   {
     title: '专项技术',
     icon: <Mountain className="w-6 h-6" />,
     items: [
-      { name: '训练周期化入门', type: 'article', source: 'iRunFar' },
-      { name: '超马新手指南', type: 'article', source: 'iRunFar' },
-      { name: '越野跑技巧专题', type: 'article', source: 'iRunFar' },
-      { name: '速度训练课表', type: 'article', source: 'iRunFar' },
+      { name: '训练周期化入门', type: 'article', source: 'iRunFar', link: 'https://www.irunfar.com/running-periodization-it-isnt-rocket-science', description: '宏观、中观、微观周期安排' },
+      { name: '超马新手指南', type: 'article', source: 'iRunFar', link: 'https://www.irunfar.com/newbies-guide-to-ultramarathons', description: '首个超马的完整准备指南' },
+      { name: '越野跑技巧专题', type: 'article', source: 'iRunFar', link: 'https://www.irunfar.com/training/trail-skills', description: '上坡、下坡、技术地形技巧' },
+      { name: '速度训练课表', type: 'article', source: 'iRunFar', link: 'https://www.irunfar.com/speed-based-workouts-for-ultramarathon-training', description: '超马中的速度训练整合' },
     ]
   },
   {
     title: '力量训练',
     icon: <Dumbbell className="w-6 h-6" />,
     items: [
-      { name: '力量训练六步法', type: 'article', source: 'iRunFar' },
-      { name: '垂直臀部驱动策略', type: 'article', source: 'iRunFar' },
+      { name: '力量训练六步法', type: 'article', source: 'iRunFar', link: 'https://www.irunfar.com/six-steps-toward-successful-strength-training', description: '从基础到专项的力量训练' },
+      { name: '垂直臀部驱动策略', type: 'article', source: 'iRunFar', link: 'https://www.irunfar.com/where-the-rubber-meets-the-road-the-role-of-hip-torque-in-optimal-running', description: '臀部生物力学与跑姿优化' },
     ]
   },
   {
     title: '恢复与预防',
     icon: <TrendingUp className="w-6 h-6" />,
     items: [
-      { name: '跑步与恢复策略', type: 'article', source: 'iRunFar' },
-      { name: '过度训练综合症', type: 'article', source: 'iRunFar' },
-      { name: '追求边际增益', type: 'article', source: 'iRunFar' },
+      { name: '跑步与恢复策略', type: 'article', source: 'iRunFar', link: 'https://www.irunfar.com/running-and-recovery', description: '主动恢复与恢复监测' },
+      { name: '过度训练综合症', type: 'article', source: 'iRunFar', link: 'https://www.irunfar.com/overtraining-syndrome-part-two-treatment-and-prevention', description: '过度训练识别与预防' },
+      { name: '追求边际增益', type: 'article', source: 'iRunFar', link: 'https://www.irunfar.com/in-pursuit-of-marginal-gains', description: 'Hardrock 100备赛细节优化' },
     ]
   }
 ];
@@ -133,7 +133,7 @@ export default function KnowledgePage() {
                     <div className="flex items-start justify-between">
                       <div className="flex-1 min-w-0">
                         <h4 className="font-medium mb-1 truncate">{item.name}</h4>
-                        <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                        <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-1">
                           {'author' in item && item.author && (
                             <span className="truncate">{item.author}</span>
                           )}
@@ -141,23 +141,34 @@ export default function KnowledgePage() {
                             <span className="truncate">来源: {item.source}</span>
                           )}
                         </div>
+                        {'description' in item && item.description && (
+                          <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">
+                            {item.description}
+                          </p>
+                        )}
                       </div>
                       <div className={`p-1.5 rounded ${typeColors[item.type as keyof typeof typeColors]}`}>
                         {typeIcons[item.type as keyof typeof typeIcons]}
                       </div>
                     </div>
                     
-                    {'link' in item && item.link && (
-                      <a 
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 inline-flex items-center gap-1 text-sm text-accent hover:underline"
-                      >
-                        <LinkIcon className="w-3 h-3" />
-                        查看原文
-                      </a>
-                    )}
+                    <div className="mt-2">
+                      {'link' in item && item.link ? (
+                        <a 
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-sm text-accent hover:underline"
+                        >
+                          <LinkIcon className="w-3 h-3" />
+                          查看原文
+                        </a>
+                      ) : (
+                        <span className="text-xs text-gray-400 dark:text-gray-500">
+                          {item.type === 'book' ? '实体书籍/电子书' : '请联系铮哥获取资料'}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>
