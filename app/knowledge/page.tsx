@@ -147,7 +147,7 @@ export default function KnowledgePage() {
                       </div>
                     </div>
                     
-                    {item.link && (
+                    {'link' in item && item.link && (
                       <a 
                         href={item.link}
                         target="_blank"
