@@ -134,10 +134,10 @@ export default function KnowledgePage() {
                       <div className="flex-1 min-w-0">
                         <h4 className="font-medium mb-1 truncate">{item.name}</h4>
                         <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                          {item.author && (
+                          {'author' in item && item.author && (
                             <span className="truncate">{item.author}</span>
                           )}
-                          {item.source && (
+                          {'source' in item && item.source && (
                             <span className="truncate">来源: {item.source}</span>
                           )}
                         </div>
