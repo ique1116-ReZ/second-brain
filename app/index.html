@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二大脑 - ReVibe项目知识库</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border-color: #667eea;
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .card-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        
+        .card-files {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .file-item {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .file-item:hover {
+            background: #eef2ff;
+            transform: translateX(5px);
+        }
+        
+        .file-name {
+            font-weight: 500;
+            color: #444;
+        }
+        
+        .file-desc {
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 3px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-inprogress {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-pending {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 第二大脑 - ReVibe知识库</h1>
+            <p>ACL术后康复训练系统的完整知识管理</p>
+        </div>
+        
+        <div class="grid">
+            <!-- 项目总览 -->
+            <div class="card" onclick="window.location.href='knowledge/revibe-business-plan.md'">
+                <div class="card-icon">🚀</div>
+                <div class="status-badge status-completed">已完成</div>
+                <div class="card-title">项目总览</div>
+                <div class="card-desc">ReVibe项目整体规划、商业计划、市场分析</div>
+                <div class="card-files">
+                    <div class="file-item" onclick="event.stopPropagation(); window.location.href='knowledge/revibe-business-plan.md'">
+                        <div class="file-name">商业计划书</div>
+                        <div class="file-desc">简化版，用于孵化器申请</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ACL图标项目 -->
+            <div class="card" onclick="window.location.href='knowledge/acl-progress-tracker.md'">
+                <div class="card-icon">🎨</div>
+                <div class="status-badge status-inprogress">进行中</div>
+                <div class="card-title">ACL图标项目</div>
+                <div class="card-desc">40个康复动作图标的设计与生成</div>
+                <div class="card-files">
+                    <div class="file-item" onclick="event.stopPropagation(); window.location.href='knowledge/acl-progress-tracker.md'">
+                        <div class="file-name">进度跟踪</div>
+                        <div class="file-desc">40个图标的详细进度</div>
+                    </div>
+                    <div class="file-item" onclick="event.stopPropagation(); window.location.href='knowledge/acl-phase1-completed.md'">
+                        <div class="file-name">Phase 1完成存档</div>
+                        <div class="file-desc">7个图标生成完成</div>
+                    </div>
+                    <div class="file-item" onclick="event.stopPropagation(); window.location.href='knowledge/acl-phase1-ready-prompts.txt'">
+                        <div class="file-name">Phase 1提示词</div>
+                        <div class="file-desc">可直接使用的提示词</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 产品需求文档 -->
+            <div class="card" onclick="window.location.href='knowledge/acl-icon-project.md'">
+                <div class="card-icon">📋</div>
+                <div class="status-badge status-completed">已完成</div>
+                <div class="card-title">产品文档</div>
+                <div class="card-desc">PRD、功能设计、技术架构</div>
+                <div class="card-files">
+                    <div class="file-item" onclick="event.stopPropagation(); window.location.href='knowledge/acl-icon-project.md'">
+                        <div class="file-name">图标项目文档</div>
+                        <div class="file-desc">40个图标的设计规范</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 技术开发 -->
+            <div class="card" onclick="window.location.href='knowledge/acl-next-steps-checklist.md'">
+                <div class="card-icon">💻</div>
+                <div class="status-badge status-pending">待开始</div>
+                <div class="card-title">技术开发</div>
+                <div class="card-desc">小程序开发、后端架构、算法实现</div>
+                <div class="card-files">
+                    <div class="file-item" onclick="event.stopPropagation(); window.location.href='knowledge/acl-next-steps-checklist.md'">
+                        <div class="file-name">下一步清单</div>
+                        <div class="file-desc">Phase 1后的行动计划</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 商业注册 -->
+            <div class="card" onclick="window.location.href='knowledge/shenzhen-registration-info.md'">
+                <div class="card-icon">🏢</div>
+                <div class="status-badge status-inprogress">进行中</div>
+                <div class="card-title">商业注册</div>
+                <div class="card-desc">深圳个体工商户注册、地址解决方案</div>
+                <div class="card-files">
+                    <div class="file-item" onclick="event.stopPropagation(); window.location.href='knowledge/shenzhen-registration-info.md'">
+                        <div class="file-name">深圳注册指南</div>
+                        <div class="file-desc">孵化器地址、政策信息</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 运营与市场 -->
+            <div class="card" onclick="window.location.href='knowledge/'">
+                <div class="card-icon">📈</div>
+                <div class="status-badge status-pending">规划中</div>
+                <div class="card-title">运营与市场</div>
+                <div class="card-desc">用户增长、内容运营、市场推广</div>
+                <div class="card-files">
+                    <div class="file-item" onclick="event.stopPropagation(); alert('待创建')">
+                        <div class="file-name">用户增长策略</div>
+                        <div class="file-desc">ACL用户获取计划</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>最后更新: 2026年2月27日 | 点击卡片或文件直接查看</p>
+            <p>所有文档存储在: /root/.openclaw/workspace/second-brain/app/knowledge/</p>
+        </div>
+    </div>
+    
+    <script>
+        // 添加点击效果
+        document.querySelectorAll('.card, .file-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+        
+        // 键盘快捷键
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'k') {
+                e.preventDefault();
+                alert('搜索功能待实现');
+            }
+        });
+    </script>
+</body>
+</html>

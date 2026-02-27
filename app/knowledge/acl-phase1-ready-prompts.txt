@@ -1,0 +1,64 @@
+# ACL Phase 1 图标提示词 - 立即使用版
+
+## 文件命名规范
+Px_动作英文名.png (x=阶段数字)
+
+## Phase 1 文件名列表
+1. P1_patella_mobility.png
+2. P1_heel_prop.png
+3. P1_prone_hang.png
+4. P1_quad_sets.png
+5. P1_ankle_pumps.png
+6. P1_straight_leg_raise.png
+7. P1_heel_slides.png
+
+## 图标风格
+- 背景: #F5E8D0 (纯色)
+- 线条: 中等粗细黑线
+- 风格: 干净图标，无文字
+- 尺寸: 1024x1024像素
+
+## 提示词列表
+
+### 1. P1_patella_mobility.png
+Medium thickness black lines on solid #F5E8D0 background. Person lying supine with knee fully extended. Hand gently moving patella side to side. Show patella movement with two small horizontal arrows: one pointing left, one pointing right, positioned at the kneecap. Side view. Clean icon style. 1024x1024 pixels.
+
+### 2. P1_heel_prop.png
+Medium thickness black lines on solid #F5E8D0 background. Person lying supine with heel elevated on pillow. Leg relaxed, knee straight. Show gravity effect with one downward arrow positioned at the knee joint. Side view. Simple icon. 1024x1024 pixels.
+
+### 3. P1_prone_hang.png
+Medium thickness black lines on solid #F5E8D0 background. Person lying prone with legs hanging off bed. Knees straight. Show gravity with two downward arrows: one at each knee. Side view. Icon style. 1024x1024 pixels.
+
+### 4. P1_quad_sets.png
+Medium thickness black lines on solid #F5E8D0 background. Person lying supine with straight leg. Isometric quadriceps contraction. Show muscle activation with subtle curved lines around the thigh muscle, and one downward arrow at the back of knee pressing into bed. Side view. Clean icon. 1024x1024 pixels.
+
+### 5. P1_ankle_pumps.png
+Medium thickness black lines on solid #F5E8D0 background. Person lying supine with straight leg. Ankle dorsiflexion and plantarflexion. Show motion with two vertical arrows at the ankle: one pointing up (dorsiflexion), one pointing down (plantarflexion). Side view. Icon style. 1024x1024 pixels.
+
+### 6. P1_straight_leg_raise.png
+Medium thickness black lines on solid #F5E8D0 background. Person lying supine, one leg straight and lifted 30-45 degrees. Show lifting direction with one upward arrow positioned along the length of the lifted leg. Side view. Simple icon. 1024x1024 pixels.
+
+### 7. P1_heel_slides.png
+Medium thickness black lines on solid #F5E8D0 background. Person lying supine, heel sliding along bed surface toward buttocks. Show sliding motion with one horizontal arrow positioned at the heel, pointing from heel toward knee. The arrow should be parallel to the bed surface. Side view. Clean icon style. 1024x1024 pixels.
+
+## 使用说明
+1. 复制对应提示词到Gemini
+2. 生成图像
+3. 按指定文件名保存
+4. 检查箭头位置准确性
+
+## 备用方案 (如果箭头位置不准确)
+对于P1_heel_slides.png，如果箭头位置错误：
+1. 去掉箭头: "Person lying supine, heel sliding along bed surface toward buttocks. Side view showing knee flexion as heel moves. Clean icon style."
+2. 使用虚线: "Show sliding path with dashed line from heel position to knee position."
+
+## 质量检查要点
+1. 背景颜色正确 (#F5E8D0)
+2. 线条中等粗细，不黑粗
+3. 箭头位置准确 (在指定解剖位置)
+4. 动作科学准确 (基于ACL康复指南)
+5. 风格统一 (7个图标视觉一致)
+
+---
+生成时间: 2026-02-27
+下次任务: 从P1_heel_slides.png开始测试箭头位置准确性
