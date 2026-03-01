@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suunto体力指标文档下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .intro {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #4f46e5;
+        }
+        
+        .intro h2 {
+            color: #4f46e5;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .doc-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: #4f46e5;
+        }
+        
+        .doc-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+        }
+        
+        .doc-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #4f46e5;
+        }
+        
+        .doc-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+        
+        .doc-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .doc-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+        }
+        
+        .download-all {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .download-all .download-btn {
+            width: auto;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+        }
+        
+        .instructions {
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        
+        .instructions h3 {
+            color: #4f46e5;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            color: #475569;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .docs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Suunto体力指标文档</h1>
+            <p>基于深度搜索和分析整理的完整指南 | 2025年3月1日</p>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <h2>🎯 文档概述</h2>
+                <p>本系列文档全面分析了Suunto智能手表中所有与体力相关的指标，包括基础指标、训练指标、Suunto高能指标，并深入研究了它们之间的关联关系。基于公开资料和运动科学原理整理而成。</p>
+            </div>
+            
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">📋</div>
+                    <h3>全面分析文档</h3>
+                    <p>详细分析25个Suunto体力相关指标，包括基础指标、训练指标、Suunto高能指标、高级生理指标。</p>
+                    <div class="doc-stats">
+                        <span>📄 8页</span>
+                        <span>🔍 25个指标</span>
+                        <span>⭐ 最全面</span>
+                    </div>
+                    <a href="Suunto_体力指标分析.md" class="download-btn" download>下载文档</a>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon">🔗</div>
+                    <h3>关联性分析</h3>
+                    <p>深入分析指标间的关联网络，构建完整的体力管理生态系统模型，包含决策系统和反馈循环。</p>
+                    <div class="doc-stats">
+                        <span>📄 7页</span>
+                        <span>🔄 关联网络</span>
+                        <span>🎯 最深入</span>
+                    </div>
+                    <a href="Suunto_指标关联性分析.md" class="download-btn" download>下载文档</a>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon">🚀</div>
+                    <h3>快速指南</h3>
+                    <p>实用速查表、决策树、问题诊断、实用技巧，便于日常参考和快速决策。</p>
+                    <div class="doc-stats">
+                        <span>📄 6页</span>
+                        <span>⚡ 快速参考</span>
+                        <span>💡 最实用</span>
+                    </div>
+                    <a href="Suunto_体力指标快速指南.md" class="download-btn" download>下载文档</a>
+                </div>
+                
+                <div class="doc-card">
+                    <div class="doc-icon">📈</div>
+                    <h3>搜索总结报告</h3>
+                    <p>完整的项目总结，包括搜索过程、核心发现、应用价值和未来研究方向。</p>
+                    <div class="doc-stats">
+                        <span>📄 5页</span>
+                        <span>📊 项目总结</span>
+                        <span>🔮 未来展望</span>
+                    </div>
+                    <a href="Suunto_搜索总结报告.md" class="download-btn" download>下载文档</a>
+                </div>
+            </div>
+            
+            <div class="download-all">
+                <a href="#" class="download-btn" id="downloadAll">📦 下载全部文档 (ZIP)</a>
+            </div>
+            
+            <div class="instructions">
+                <h3>📖 使用说明</h3>
+                <ol>
+                    <li>点击单个文档按钮直接下载Markdown文件</li>
+                    <li>使用Markdown编辑器（如Typora、Obsidian、VS Code）查看</li>
+                    <li>文档基于运动科学原理，建议结合自身情况参考使用</li>
+                    <li>定期回顾并根据训练进展调整理解</li>
+                </ol>
+                <p><strong>提示：</strong> 所有文档都保存在 <code>/suunto-docs/</code> 目录下，也可以通过Vercel项目文件管理直接访问。</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Suunto体力指标分析项目 | 基于公开资料整理 | 仅供学习参考</p>
+            <p>文档创建时间：2025年3月1日 | 最后更新：2025年3月1日</p>
+        </div>
+    </div>
+    
+    <script>
+        // 创建ZIP下载功能
+        document.getElementById('downloadAll').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // 创建ZIP文件的临时方案
+            const files = [
+                'Suunto_体力指标分析.md',
+                'Suunto_指标关联性分析.md', 
+                'Suunto_体力指标快速指南.md',
+                'Suunto_搜索总结报告.md'
+            ];
+            
+            // 由于浏览器限制，我们提供逐个下载的替代方案
+            let downloadMessage = '由于浏览器安全限制，无法直接打包ZIP文件。\n\n请依次下载以下文件：\n';
+            files.forEach(file => {
+                downloadMessage += `• ${file}\n`;
+            });
+            
+            alert(downloadMessage);
+            
+            // 或者提供手动下载链接
+            const manualDownload = confirm('是否要打开所有文件的下载链接？');
+            if (manualDownload) {
+                files.forEach(file => {
+                    window.open(file, '_blank');
+                });
+            }
+        });
+        
+        // 添加下载统计（可选）
+        document.querySelectorAll('.download-btn').forEach(btn => {
+            if (!btn.id) { // 排除"下载全部"按钮
+                btn.addEventListener('click', function() {
+                    const fileName = this.getAttribute('href');
+                    console.log(`下载文件: ${fileName}`);
+                    // 这里可以添加分析代码
+                });
+            }
+        });
+    </script>
+</body>
+</html>
